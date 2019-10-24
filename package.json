@@ -1,5 +1,6 @@
 {
   "name": "selenium-node-utils",
+  "private": true,
   "version": "1.0.0",
   "description": "1. ->eg. declaring `firefoxDriver = await new webdriver.Builder().forBrowser('firefox').build();` 1. importing into your file `const { getElementById } = require('./utilities')` 1. setting value to a var (*let? ;-)*): `let loginButton = await getElementById(firefoxDriver,'login-button')",
   "main": "utils.js",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/johnhutchins/selenium-node-utils/issues"
   },
-  "homepage": "https://github.com/johnhutchins/selenium-node-utils#readme"
+  "homepage": "https://github.com/johnhutchins/selenium-node-utils#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
 }
