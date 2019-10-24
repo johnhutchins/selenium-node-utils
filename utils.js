@@ -33,7 +33,7 @@ const getElementsByLinkText = async(context,link) => {
 }
 
 const getCurrentUrl  = async (context) => {
-    return context.getCurrentUrl();
+    return context.getCurrentUrl()
 }
 
 module.exports = {
