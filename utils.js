@@ -16,7 +16,7 @@ const getElementsByClassName = async(context,className) => {
     return context.findElements(By.className(className))
 }
 
-const getBaseUrl  = async (context) => {
+const getCurrentUrl  = async (context) => {
     return context.getCurrentUrl();
 }
 
