@@ -32,7 +32,7 @@ const getElementsByLinkText = async(context,link) => {
     return context.findElements(By.linkText(link))
 }
 
-const getBaseUrl  = async (context) => {
+const getCurrentUrl  = async (context) => {
     return context.getCurrentUrl();
 }
 
