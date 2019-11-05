@@ -44,6 +44,14 @@ const getElementsByName = async(context,name)=>{
     return context.findElements(By.name(name))
 }
 
+const getElementByXPath = async(context,xpath)=>{
+    return context.findElement(By.xpath(xpath))
+}
+
+const getElementsByXPath = async(context,xpath)=>{
+    return context.findElements(By.xpath(xpath))
+}
+
 const getCurrentUrl  = async(context)=>{
     return context.getCurrentUrl()
 }
@@ -56,7 +64,7 @@ const getErrorLogs = async(context)=>{
     return context.manage().logs().get("browser")
 }
 
-const sleep = async(context,duration)=>{
+const explicitWait = async(context,duration)=>{
     return context.sleep(duration)
 }
 
@@ -72,8 +80,10 @@ module.exports = {
     getElementsByPartialLinkText,
     getElementByName,
     getElementsByName,
+    getElementByXPath,
+    getElementsByXPath,
     getCurrentUrl,
     getCurrentTitle,
     getErrorLogs,
-    sleep
+    explicitWait
 }
