@@ -44,8 +44,20 @@ const getElementsByName = async(context,name)=>{
     return context.findElements(By.name(name))
 }
 
-const getCurrentUrl  = async (context) => {
+const getCurrentUrl  = async(context)=>{
     return context.getCurrentUrl()
+}
+
+const getCurrentTitle = async(context)=>{
+    return context.getTitle()
+}
+
+const getErrorLogs = async(context)=>{
+    return context.manage().logs().get("browser")
+}
+
+const sleep = async(context,duration)=>{
+    return context.sleep(duration)
 }
 
 module.exports = {
@@ -56,9 +68,12 @@ module.exports = {
     getElementsByTagName,
     getElementByLinkText,
     getElementsByLinkText,
-    getELementByPartialLinkText,
+    getElementByPartialLinkText,
     getElementsByPartialLinkText,
     getElementByName,
     getElementsByName,
-    getBaseUrl
+    getCurrentUrl,
+    getCurrentTitle,
+    getErrorLogs,
+    sleep
 }
