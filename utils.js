@@ -28,6 +28,22 @@ const getElementsByLinkText = async(context,link) => {
     return context.findElements(By.linkText(link))
 }
 
+const getElementByPartialLinkText = async(context,linkText)=>{
+    return context.findElement(By.partialLinkText(linkText))
+}
+
+const getElementsByPartialLinkText = async(context,linkText)=>{
+    return context.findElements(By.partialLinkText(linkText))
+}
+
+const getElementByName = async(context,name)=>{
+    return context.findElement(By.name(name))
+}
+
+const getElementsByName = async(context,name)=>{
+    return context.findElements(By.name(name))
+}
+
 const getCurrentUrl  = async (context) => {
     return context.getCurrentUrl()
 }
@@ -40,5 +56,9 @@ module.exports = {
     getElementsByTagName,
     getElementByLinkText,
     getElementsByLinkText,
+    getELementByPartialLinkText,
+    getElementsByPartialLinkText,
+    getElementByName,
+    getElementsByName,
     getBaseUrl
 }
